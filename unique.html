@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	function unique(arr){
+		var check={};
+		var data=[];
+		for(var i=0;i<arr.length;i++){
+			if(!check[arr[i]]){
+				data.push(arr[i]);
+				check[arr[i]]=true;
+			}
+		}
+		return data;
+	}
+	var arr=[1,1,2,3,5,46,2,2,2,7,7,7];
+	alert(unique(arr));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
