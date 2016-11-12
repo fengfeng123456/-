@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	function getMaxDup(str){
+		var check={};
+		for(var i=0;i<str.length;i++){
+			if(check[str.charAt(i)]){
+				check[str.charAt(i)]+=1;
+			}else{
+				check[str.charAt(i)]=1;
+			}
+		};
+		var mark=0;
+		var on='';
+		for(var key in check){
+			if(check[key]>=mark){
+				mark=check[key];
+				on=key;
+			}
+		}
+		return on;
+	}
+	var strr="2332"
+	alert(getMaxDup(strr));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
