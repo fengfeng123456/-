@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	function bubble(arr){
+		var mark=0;
+		for(var i=0;i<arr.length-1;i++){
+			for(var j=1+i;j<arr.length;j++){
+				if(arr[i]>arr[j]){
+					mark=arr[i];
+					arr[i]=arr[j];
+					arr[j]=mark;
+				}
+			}
+		}
+		return arr;
+	}
+	var a=[2,3,1,5,84,5,6,48,12,454,0,21,1];
+	alert(bubble(a));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
