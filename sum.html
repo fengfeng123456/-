@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	console.time("1")
+	function sum(n){
+		var sum=0;
+		for(i=1;i<=n;i++){
+			sum+=i;
+		}
+		return sum;
+	}
+	console.log(sum(100));
+	console.timeEnd("1");//16ms
+
+	console.time("2");
+	function sum2(su,j){
+		
+		if(j<=100){
+			su=sum2(su,j+1);
+			su +=j;
+		}
+		return su;
+	}
+	console.log(sum2(0,0));
+	console.timeEnd("2");//1ms
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
