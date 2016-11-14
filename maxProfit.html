@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+
+	//第一种
+	function findMax(arr){
+		var mark=0;
+		arr.sort(function(a,b){
+			return a-b;
+		});
+		mark=arr[arr.length-1]-arr[0];
+		return mark;
+
+	}
+	var arr=[1,2,5,46,98,79,4,41,123,0];
+	//alert(findMax(arr));
+	//第二种
+	function findMax2(arr){
+		var min=0;
+		var profit=0;
+		for(var i=0;i<arr.length;i++){
+			min=Math.min(min,arr[i]);
+			profit=Math.max(profit,arr[i]-min);
+		}
+		return profit;
+	}
+	alert(findMax2(arr));
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
