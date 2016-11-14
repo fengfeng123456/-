@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	function randomString(n){
+		var str="abcdefghijklmnopqrstuvwxyz0123456789";
+
+		var strr='';
+		for(var i=0;i<n;i++){
+			var len=str.length;
+			strr+=str.substr(parseInt(Math.random()*len),1);
+		}
+		return strr;
+	}
+	alert(randomString(10))
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
